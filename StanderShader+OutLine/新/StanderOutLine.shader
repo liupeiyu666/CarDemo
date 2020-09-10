@@ -165,8 +165,9 @@ Shader "LiYuan/Standard"
 			v2f vert(a2v v)
 			{
 				v2f o;
+				v.vertex *= (1 + _OutlineWidth);
 				o.pos = UnityObjectToClipPos(v.vertex);
-				o.pos.xyz *= (1 + _OutlineWidth);
+				//o.pos.xyz *= (1 + _OutlineWidth);
 				return o;
 
 
@@ -339,8 +340,8 @@ Shader "LiYuan/Standard"
 			v2f vert(a2v v)
 			{
 				v2f o;
+				v.vertex *= (1 + _OutlineWidth);
 				o.pos = UnityObjectToClipPos(v.vertex);
-				o.pos.xyz *= (1 + _OutlineWidth);
 				return o;
 
 
